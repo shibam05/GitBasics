@@ -14,3 +14,5 @@ name = 'first'
 console.log('name', name)
 name = 'second'
 console.log('name', name)
+// o/p // name first
+// name second
