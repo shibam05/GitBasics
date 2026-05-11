@@ -16,3 +16,8 @@ name = 'second'
 console.log('name', name)
 // o/p // name first
 // name second
+
+name[0] = 's'
+console.log('name', name)
+// o/p // name first
+// In the above code, we have created a variable 'name' and assigned it the value 'first'. We then printed the variable. After that, we changed the value of 'name' to 'second' and printed it again. Finally, we attempted to change the first character of the string 'name' to 's', but since strings are immutable in JavaScript, this operation does not modify the original string. Therefore, when we print 'name' again, it still holds the value 'second'.
