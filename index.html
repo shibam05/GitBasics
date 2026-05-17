@@ -11,6 +11,11 @@
     <h2>Github clone homepage</h2>
     <p>Welcome to the Github clone!</p>
     <p>This is a simple clone of the Github homepage.</p>
+    <!-- will show time from app.js -->
+    <div>
+        <h3>Current Time:</h3>
+        <p id="MyClockDisplay"></p>
+    </div>
     <div>
         <p>Here are some features of the Github clone:</p>
         <ul>
@@ -32,6 +37,7 @@
         <ul id="fileList">
         </ul>
     </div>
+    <script src="app.js"></script>
     <script>
         function uploadFile() {
             const fileInput = document.getElementById('fileInput');
@@ -40,18 +46,18 @@
             if (fileInput.files.length > 0) {
                 const file = fileInput.files[0];
                 const listItem = document.createElement('li');
-                
+
                 // Get file metadata
                 const lastModified = new Date(file.lastModified).toLocaleString();
                 const sizeKB = (file.size / 1024).toFixed(2);
-                
+
                 listItem.innerHTML = `
                     <strong>File Name:</strong> ${file.name}<br>
                     <strong>Size:</strong> ${sizeKB} KB (${file.size} bytes)<br>
                     <strong>Type:</strong> ${file.type}<br>
                     <strong>Last Modified:</strong> ${lastModified}
                 `;
-                
+
                 fileList.appendChild(listItem);
                 fileInput.value = ''; // Clear the input after upload
             } else {
